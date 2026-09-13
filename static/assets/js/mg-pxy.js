@@ -13,21 +13,21 @@
 
     let v = localStorage.getItem("pchoice");
     if (v === "sc") {
-      localStorage.setItem("pchoice", "sj");
-      return "sj";
+      localStorage.setItem("pchoice", "uv");
+      return "uv";
     }
 
     if (hadLegacy) {
-      localStorage.setItem("pchoice", "sj");
-      return "sj";
+      localStorage.setItem("pchoice", "uv");
+      return "uv";
     }
 
     if (v === "uv" || v === "dy" || v === "sj") {
       return v;
     }
 
-    localStorage.setItem("pchoice", "sj");
-    return "sj";
+    localStorage.setItem("pchoice", "uv");
+    return "uv";
   }
 
   window.resolveProxyPchoice = migrate;
